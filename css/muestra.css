@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Domaine Disp Nar';
+src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+   ;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domaine Disp Nar';
+src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+   ;
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domaine Disp Nar';
+src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+   ;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+[data-scroll] {
+	will-change: transform;
+}
+
+
+/* ----- ROOT ----- */
+:root{
+  --display-large: 5.96rem;
+  --display-medium: 4.768rem;
+--display-small: 3.815rem;
+  --heading-h1: 3.052rem;
+  --heading-h2: 2.441rem;
+  --heading-h3: 1.953rem;
+--heading-h4: 1.563rem;
+--heading-h5: 1.25rem;
+  --parrafo: 1.125rem;
+  --text-small: 0.8rem;
+  --font-main: 'StudioFeixenSansTrial-Book-Regular', 'Author-Regular';
+  --font-serif: 'Domaine Disp Nar', 'serif';
+  --color-primary: #100E0E;
+  --color-secundary: #F43F17;
+}
+
+/*
+  .title h4{
+    font-size: var(--heading-h5);
+    color: var(--color-primary);
+    margin-left: 6.8rem;
+  }
+*/
+.wrapper{ 
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 4rem 0 0 0;
+  margin-bottom: 3rem;
+  border-top: #d1d1d3 1px solid;
+}
+
+.options{
+	max-width: 100%;
+	height: auto;
+	position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.option{
+  height: 95vh;
+  width: calc(48%);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  position: relative;
+}
+
+.label{
+  height: 85%;
+  background-color: #F3F3F3;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  transition: all .5s cubic-bezier(.67,0,.285,1);
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  display: flex;
+  justify-content: center;
+}
+
+.label a{
+  display: flex;
+  justify-content: center;
+}
+.option .label a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.option .main{ padding: 2rem 0 2rem 0;}
+.option .main p{
+  font-size: var(--heading-h5);
+  font-weight: 400;
+  color: var(--color-primary);
+}
+.main .small{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--heading-h6);
+  padding: 0.5rem 0 1rem 0;
+}
+.main .small ul{ display: flex;}
+.main .small ul li{ 
+  background-color: #fcc5b9;
+  padding: 0.5rem 1.5rem;
+  border-radius: .55rem;
+  font-size: 0.8rem;
+  font-family: var(--font-main);
+  font-weight: 500;
+  color: #f43f17;
+}
+.main .small ul li:first-child{ margin-right: 1rem;}
+.main .small span{ 
+  color: #626262;
+  font-family: var(--font-main);
+  letter-spacing: -.12px;
+}
+/*
+.label a .main{ 
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 1.5rem;
+}
+
+  .label a .main p{
+    font-family: var(--font-serif);
+    font-size: var(--heading-h5);
+    color: #fff;
+    letter-spacing: .35px;
+    margin: 0 0 0.75rem 2rem;
+  }
+
+  .label a .main .caso{
+    color: rgba(255, 255, 255, 0.678);
+    margin: 0 0 1rem 2rem;
+    letter-spacing: .45px;
+  }
+*/
+
+/*
+.promart{ background: #655DB7;}
+.beluks{ background-color: #56BDE8;}
+.philia{ background: #ff8a9f;}
+
+.option:hover {
+    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+*/
+
+.promart a{ padding-top: 5rem;}
+.promart a img{ 
+  max-width: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+.beluks a{ padding-top: 5rem;}
+.beluks a img{
+  max-width: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+.philia a{ padding-top: 2rem;}
+.philia a img{
+  max-width: 60%;
+  object-fit: contain;
+  display: block;
+}
+
+.label a img:hover{
+  filter: brightness(100%);
+  transform: scale(1.3);
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  transition: all .5s ease-out;
+}
+
+/*
+@media (max-width: 991px){
+  .option{ height: 65vh;}
+  .label a .main{ 
+    display: flex;
+    justify-content: center;
+  }
+}
+*/
+@media screen and ( max-width: 768px){
+  /*
+  .wrapper{ 
+    margin: 4rem 3rem 3rem 3rem;
+  }
+
+   .option:last-child{ margin-bottom: 0;}
+
+  .label a{ 
+    display: flex;
+    justify-content: center;
+  }
+
+  .promart .label a img, 
+  .beluks .label a img, 
+  .philia .label a img {
+    max-width: 80%;
+    object-fit: contain;
+    display: block;
+  }
+*/
+.option{
+  width: calc(100%);
+  height: auto;
+}
+
+.texto-intro {
+  padding: 3rem 0 5rem 0;
+}
+}
+
+@media screen and ( max-width: 576px){
+  .option{ margin-bottom: 0;}
+  .main .small{ padding: 1rem 0 1rem 0;}
+}
+
+@media screen and ( max-width: 414px){
+  .main .small ul li{ padding: 0.5rem 0.75rem;}
+}
+
+
+@media screen and ( max-width: 360px){
+  .option .main p{ font-size: 1.7rem;}
+  .main .small span{ 
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

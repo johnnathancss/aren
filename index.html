@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yupanqui</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/domaine.css">
+    <link rel="stylesheet" href="css/style-main.css">
+    <link rel="stylesheet" href="css/muestra.css">
+    <link rel="stylesheet" href="css/css-awsome/all.min.css">
+
+    <script>
+		document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+</head>
+<body class="loading">
+
+    <div onmouseenter="mouseenter()" onmouseleave="mouseleave()" class="caja">
+    </div>
+
+    <main>
+        <div  data-scroll>
+            <header>
+                <div class="menu-bar">
+                    <div class="logo">
+                        <a>YUPANQUI</a>
+                    </div>
+                    
+                    <nav class="nav-bar">
+                        <input type="checkbox" id="click">
+                        <label for="click" class="menu-btn">
+                            <i class="fas fa-bars"></i>
+                        </label>
+
+                        <ul class="nav-item">
+                            <!--
+                                <li class="btn"><a class="active" href="index.html">Inicio</a></li>
+                            -->
+                            <li class="btn"><a href="#proyectos" >Proyectos</a></li>
+                            <li class="btn"><a href="acerca.html">Acerca de Mi</a></li>
+                            <li class="btn"><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="contenido">
+                <div class="flex">
+                    <div class="descripcion">
+                        <div class="texto-intro">
+                            <p class="texto"><span class="hola">Hola,</span> <span class="nombre">mi nombre es </span> <span>Johnnathan, </span> <span class="soy">soy</span> Diseñador UX/UI.</p>
+                        </div>
+                    </div>
+                 
+                    <div class="options" id="proyectos">
+                        <div class="wrapper">
+                           <div class="option" style="--optionBackground:url(..);">
+                              <div class="label promart">
+                                 <a href="promart.html">
+                                    <img src="image/pro_mart/promart-pantalla.png" alt="">
+                                 </a>
+                              </div>
+
+                              <div class="main">
+                                <p><span class="caso">Promart</span> - Web Ecommerce</p>
+                                <div class="small">
+                                    <span>Caso de Estudio</span>
+                                    <ul>
+                                        <li>UI Design</li>
+                                        <li> UI Kit</li>
+                                    </ul>
+                                </div>
+                             </div>
+                           </div>
+            
+                           <div class="option" style="--optionBackground:url(..);">
+                              <div class="label beluks">
+                                 <a href="beluks.html">
+                                    <img src="image/bel/beluks-pantalla.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="main">
+                                    <p><span class="caso">B'lucks</span> - Rediseño Web</p>
+                                    <div class="small">
+                                        <span>Caso de Estudio</span>
+                                        <ul>
+                                            <li>UX/UI Design</li>
+                                            <li>UI Kit</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                           </div>
+            
+                           <div class="option" style="--optionBackground:url(..);">
+                              <div class="label philia">
+                                 <a href="philia.html">
+                                    <img src="image/phillia-phone.png" alt="">
+                                 </a>
+                              </div>
+                              <div class="main">
+                                <p><span class="caso">Philia</span> - App Móvil</p>
+                                <div class="small">
+                                    <span>Caso de Estudio</span>
+                                    <ul>
+                                        <li>UX/UI Design</li>
+                                        <li>UI Kit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           </div>
+            
+                           <div class="option" style="--optionBackground:url(..);">
+                                <div class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+	</main>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/demo.js"></script>
+</body>
+</html>

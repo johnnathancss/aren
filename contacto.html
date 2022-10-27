@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/studio.css">
+    <link rel="stylesheet" href="css/author.css">
+    <link rel="stylesheet" href="css/style-contacto.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/css-awsome/all.min.css">
+
+    <script>
+		document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+</head>
+<body class="loading"> 
+    <div onmouseenter="mouseenter()" onmouseleave="mouseleave()" class="caja"></div>
+    
+    <main>
+        <div data-scroll>
+            <header>
+                <div class="menu-bar">
+                    <div class="header-center">
+                        <div class="logo">
+                            <a>YUPANQUI</a>
+                        </div>
+                        
+                        <nav class="nav-bar">
+                            <input type="checkbox" id="click">
+                            <label for="click" class="menu-btn">
+                                <i class="fas fa-bars"></i>
+                            </label>
+    
+                            <ul class="nav-item">
+                                <li class="btn"><a href="index.html#proyectos">Proyectos</a></li>
+                                <li class="btn"><a href="acerca.html">Acerca de Mi</a></li>
+                                <li class="btn"><a href="contacto.html" class="active">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <div class="contacto">
+                <div class="formulario">
+                    <div class="left-titulo">
+                        <div class="titulo-flex">
+                            <h4>Contacto</h4><span></span>
+                            <p><span class="soy">Soy</span> <span class="disenador">Diseñador UX/UI</span>. <span class="me">Me apasionas las </span>artes gráficas, diseñar y crear productos digitales.</p>
+                        </div>
+                    </div>
+                        
+                    <div class="right-form">
+                        <div class="form-flex">
+                            <form action="correo.php" method="post">
+                                <div class="group">      
+                                    <input class="input-text" type="text" name="name" required on invalid="thissetCustomValidity('Datos requeridos')" 
+                                    on input="this.setCustomValidity('')">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="nombre-label">Nombre</label>
+                                </div>
+                                        
+                                <div class="group">      
+                                    <input class="input-text" type="email" required on invalid="this.setCustomValidity('Escribir email')" 
+                                    on input="this.setCustomValidity('')" id="email" name="email">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="nombre-label">Email</label>
+                                </div>
+            
+                                <div class="group">  
+                                    <input class="input-text" type="text"name="asunto" required on invalid="this.setCustomValidity('Escribir el Asunto')" 
+                                    on input="this.setCustomValidity('')">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="nombre-label">Asunto</label>
+                                </div>
+            
+                                <div class="group">
+                                    <textarea spellcheck="false" placeholder="Escribir mensaje" name="msg" id="msg" required on invalid="this.setCustomValidity('Datos requeridos')"
+                                    on input="this.setCustomValidity('')"></textarea>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <button class="btn-subtmit" name="enviar" type="submit">enviar</button>
+                                </div>
+                            </form>
+                            <?php
+                            include("correo.php");
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+   
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/demo.js"></script>
+    <script>
+        const textarea = document.querySelector("textarea");
+        textarea.addEventListener("keyup", e =>{
+          textarea.style.height = "63px";
+          let scHeight = e.target.scrollHeight;
+          textarea.style.height = `${scHeight}px`;
+        });
+    </script>
+</body>
+</html>

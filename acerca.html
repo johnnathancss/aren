@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/studio.css">
+    <link rel="stylesheet" href="css/author.css">
+    <link rel="stylesheet" href="css/style-acerca.css">
+    <link rel="stylesheet" href="css/domaine.css">
+    <link rel="stylesheet" href="css/css-awsome/all.min.css">
+
+    <script>
+		document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+</head>
+<body class="loading">
+    <div onmouseenter="mouseenter()" onmouseleave="mouseleave()" class="caja">
+    </div>
+
+    <main>
+        <div data-scroll>
+            <header>
+                <div class="menu-bar">
+                    <div class="header-center">
+                        <div class="logo">
+                            <a>YUPANQUI</a>
+                        </div>
+                        
+                        <nav class="nav-bar">
+                            <input type="checkbox" id="click">
+                            <label for="click" class="menu-btn">
+                                <i class="fas fa-bars"></i>
+                            </label>
+    
+                            <ul class="nav-item">
+                                <li class="btn"><a href="index.html#proyectos">Proyectos</a></li>
+                                <li class="btn"><a href="acerca.html" class="active">Acerca de Mi</a></li>
+                                <li class="btn"><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        
+            <div class="about">
+                <div class="perfil">
+                    <div class="info">
+                        <div class="datos">
+                            <p class="nombre">Johnnathan</p>
+                            <p class="apellido"></p>
+                        </div>
+
+                        <div class="foto">
+                            <div class="foto-perfil">
+                                <img src="image/foto_perfil.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ux-ui">
+                        <div class="texto">
+                            <h4>Más Sobre Mi</h4>
+                            <h5>Hola</h5>
+                            <br>
+                            <p>
+                            Soy Diseañdor que trabaja para comprender mejor cómo la actividad ayudar a los usurios para comprender y resolver los probelmas, esto me motiva y da forma al comportamiento humano. Mi experiencia incluye diseño web, diseño de experiencia de Usuario, diseño de interfaz de usuario e implementar con herramientas para la investigación. Disfruto generando nuevas ideas e ideando soluciones factibles a problemas ampliamente relevantes. 
+                            <br>
+                            <br>
+                            Los colegas me describen como una persona motivada e ingeniosa que mantiene una actitud positiva y proactiva cuando se enfrenta a la adversidad. Actualmente, estoy buscando oportunidades que me permitan desarrollar y promover mi capacidad para el ayudar al equipo.
+                            </p>
+                        </div>
+
+                        <div class="boton">
+                            <div class="cv">
+                                <a target="_blank" href="image/CV_UX-UI-Designer.pdf">Descargar CV</a>
+
+                                <div class="icono">
+                                    <a target="_blank" href="image/CV_UX-UI-Designer.pdf">
+                                        <img src="image/arrow-download.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+                            <div class="redes">
+<!-- 
+                                <div class="lista">
+                                    <p>Redes</p>
+                                    <a target="_blank" href="">Linkedin</a>
+                                    <a target="_blank" href="">Behance</a>
+                                    <a target="_blank" href="">Dribbble</a>
+                                </div>
+-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </main>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/demo.js"></script>
+    <script src="js/kursor.min.js"></script>
+    <script>
+        var kursorx = new kursor({
+        type: 1,
+        color: '#F43F17',
+        })
+    
+    
+        function mouseenter () {
+        kursorx.hidden()
+        }
+        function mouseleave () {
+        kursorx.hidden(false)
+        }
+        // function clickx() {
+        //   // kursorx.color('rgba(100,0,100)')
+        //   kursorx.hidden()
+        // }
+        // function clickx2() {
+        //   // kursorx.color('rgba(100,0,100)')
+        //   kursorx.hidden(false)
+        // }
+    
+        var kursor2 = new kursor({
+        el: '.caja',
+        color: '#F43F17',
+        type: 4,
+        })
+    
+        // var kursor2 = new kursor({
+        //   type: 2,
+        //   removeDefaultCursor: false,
+        // })
+    </script>
+</body>
+</html>

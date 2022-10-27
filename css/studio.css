@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Studio Feixen Sans Trial Book';
+    src: url('StudioFeixenSansTrial-Book.woff2') format('woff2'),
+        url('StudioFeixenSansTrial-Book.woff') format('woff'),
+        url('StudioFeixenSansTrial-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Feixen Sans Trial';
+    src: url('StudioFeixenSansTrial-Bold.woff2') format('woff2'),
+        url('StudioFeixenSansTrial-Bold.woff') format('woff'),
+        url('StudioFeixenSansTrial-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Feixen Sans Trial';
+    src: url('StudioFeixenSansTrial-Regular.woff2') format('woff2'),
+        url('StudioFeixenSansTrial-Regular.woff') format('woff'),
+        url('StudioFeixenSansTrial-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Feixen Sans Trial';
+    src: url('StudioFeixenSansTrial-Medium.woff2') format('woff2'),
+        url('StudioFeixenSansTrial-Medium.woff') format('woff'),
+        url('StudioFeixenSansTrial-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Domaine Disp Nar';
+    src: url('DomaineDispNarMedium.eot');
+    src: url('DomaineDispNarMedium.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispNarMedium.woff2') format('woff2'),
+        url('DomaineDispNarMedium.woff') format('woff'),
+        url('DomaineDispNarMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+    src: url('DomaineDispNarExtrabold.eot');
+    src: url('DomaineDispNarExtrabold.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispNarExtrabold.woff2') format('woff2'),
+        url('DomaineDispNarExtrabold.woff') format('woff'),
+        url('DomaineDispNarExtrabold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+    src: url('DomaineDispNarBlack.eot');
+    src: url('DomaineDispNarBlack.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispNarBlack.woff2') format('woff2'),
+        url('DomaineDispNarBlack.woff') format('woff'),
+        url('DomaineDispNarBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+    src: url('DomaineDispNar-Bold.eot');
+    src: url('DomaineDispNar-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispNar-Bold.woff2') format('woff2'),
+        url('DomaineDispNar-Bold.woff') format('woff'),
+        url('DomaineDispNar-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+    src: url('DomaineDispNar-Regular.eot');
+    src: url('DomaineDispNar-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispNar-Regular.woff2') format('woff2'),
+        url('DomaineDispNar-Regular.woff') format('woff'),
+        url('DomaineDispNar-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+    src: url('DomaineDispNarSemibold.eot');
+    src: url('DomaineDispNarSemibold.eot?#iefix') format('embedded-opentype'),
+        url('DomaineDispNarSemibold.woff2') format('woff2'),
+        url('DomaineDispNarSemibold.woff') format('woff'),
+        url('DomaineDispNarSemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

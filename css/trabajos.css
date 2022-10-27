@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'Domaine Disp Nar';
+src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+   ;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domaine Disp Nar';
+src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+   ;
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domaine Disp Nar';
+src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+   url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+   ;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+[data-scroll] {
+	will-change: transform;
+}
+
+
+/* ----- ROOT ----- */
+:root{ 
+	--display: 5.96rem;
+     --heading-h1: 3.815em;
+     --heading-h2: 4.768rem;
+     --heading-h3: 3.052rem;
+     --heading-h4: 2.441em;
+	--heading-h5: 1.953em;
+	--heading-h6: 1.563em;
+    --parrafo: 1.25em;
+    --font-main: 'StudioFeixenSansTrial-Book-Regular', 'Author-Regular';
+    --font-serif: 'Domaine Disp Nar', 'serif';
+    --color-primary: #191919;
+    --color-secundary: #F43F17;
+    --color-hover: #191919;
+    --color-focus: #77777c;
+ }
+
+/*
+  .title h4{
+    font-size: var(--heading-h5);
+    color: var(--color-primary);
+    margin-left: 6.8rem;
+  }
+*/
+.wrapper{ 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #99dbf5;
+}
+
+.options{
+	max-width: 100%;
+	height: auto;
+	position: relative;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background: #949499;
+}
+
+.option{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  margin: 0 auto;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  transition: all .5s cubic-bezier(.67,0,.285,1);
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  width: calc(49%);
+}
+
+.option .label a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label a .main{ 
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 1.5rem;
+}
+  .label a .main p{
+    font-family: var(--font-serif);
+    font-size: var(--heading-h5);
+    color: #fff;
+    letter-spacing: .35px;
+    margin: 0 0 0.75rem 2rem;
+  }
+
+  .label a .main .caso{
+    color: rgba(255, 255, 255, 0.678);
+    margin: 0 0 1rem 2rem;
+    letter-spacing: .45px;
+  }
+
+.promart{ background: #655DB7;}
+.beluks{ background-color: #56BDE8;}
+.philia{ background: #ff8a9f;}
+
+
+.option:hover {
+    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.promart .label a img{ 
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.beluks .label a img{
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+.philia .label a img{
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.label a img:hover{
+  filter: brightness(100%);
+  transform: scale(1.3);
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+  transition: all .5s ease-out;
+}
+
+@media (max-width: 991px){
+  .option{ height: 65vh;}
+  .label a .main{ 
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and ( max-width: 768px){
+  .wrapper{ 
+    margin: 4rem 3rem 3rem 3rem;
+  }
+
+  .option{
+    width: calc(100%);
+    height: 95vh;
+    margin-bottom: 2rem;
+  }
+    .option:last-child{ margin-bottom: 0;}
+
+  .label a{ 
+    display: flex;
+    justify-content: center;
+  }
+
+  .promart .label a img, 
+  .beluks .label a img, 
+  .philia .label a img {
+    max-width: 80%;
+    object-fit: contain;
+    display: block;
+  }
+
+}
+
+@media screen and ( max-width: 576px){
+  .option{
+    width: calc(100%);
+    height: 88vh;
+    margin-bottom: 2rem;
+  }
+  
+  .label a .main p{
+    font-size: var(--parrafo);
+    margin: 0 0 1.5rem 0;
+  }
+
+  .promart .label a img, 
+  .beluks .label a img, 
+  .philia .label a img {
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+@media screen and ( max-width: 414px){
+  .menu-bar{ padding: 0 2rem;}
+  .wrapper {
+    margin: 4rem 2rem 3rem 2rem;
+}
+  .option{ height: 70vh;}
+  .promart .label a img, 
+  .beluks .label a img, 
+  .philia .label a img {
+    max-width: auto 120%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+
+@media screen and ( max-width: 360px){
+  .option{ height: 65vh;}
+  .label a .main p{
+    margin: 0 0 1.1rem 0;
+  }
+}

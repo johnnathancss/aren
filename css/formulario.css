@@ -1,0 +1,485 @@
+@font-face {
+    font-family: 'StudioFeixenSansTrial';
+    src: url('../fonts/strial/StudioFeixenSansTrial-Bold.ttf') format("truetype"),
+         url('../fonts/strial/StudioFeixenSansTrial-Book.ttf') format("truetype"),
+         url('../fonts/strial/StudioFeixenSansTrial-Medium.ttf') format("truetype"),
+         url('../fonts/strial/StudioFeixenSansTrial-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+ }
+ 
+ @font-face {
+     font-family: 'author';
+     src: url('../fonts/Author-Regular.ttf') format("truetype"),
+          url('../fonts/Author-Semibold.ttf') format("truetype"),
+          url('../fonts/Author-Bold.ttf') format("truetype"),
+          url('../fonts/Author-Medium.ttf') format("truetype"),
+          url('../fonts/Author-Light.ttf') format("truetype");
+     font-weight: normal;
+     font-style: normal;
+  }
+ 
+@font-face {
+    font-family: 'Domaine Disp Nar';
+	src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+		 ;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+	src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+		 ;
+    font-weight: bolder;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+	src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+ 
+ /* ----- ROOT ----- */
+ :root{ 
+	--display: 5.96rem;
+     --heading-h1: 3.815em;
+     --heading-h2: 4.768rem;
+     --heading-h3: 3.052rem;
+     --heading-h4: 2.441em;
+	--heading-h5: 1.953em;
+	--heading-h6: 1.563em;
+     --parrafo: 1.25em;
+	--font-main: 'StudioFeixenSansTrial-Book-Regular', 'Author-Regular';
+    --font-serif: 'Domaine Disp Nar', 'serif';
+	--color-primary: #191919;
+	--color-secundary: #F43F17;
+	--color-hover: #191919;
+	--color-focus: #77777c;
+ }
+
+/* ----- BODY ----- */
+body{ 
+    transition: all .3s ease-in;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+/* ======= CÓDIGOS DE FORMULARIO ======= */
+.contacto{
+    max-width: 100vw;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+    .formulario{
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        clear: both;
+        padding-top: 3rem;
+    }
+
+    .left-titulo{
+        flex-basis: 40%;
+        display: flex;
+        justify-content: center;
+        align-self: stretch;
+    }
+
+        .left-titulo h4{
+            font-size: var(--heading-h2);
+            font-family: var(--font-serif);
+        }
+        .soy{ color: #bbbbbe;}
+        .disenador{ color: #191919;}
+        .me{ color: var(--color-focus);}
+
+        .left-titulo p{
+            font-size: var(--heading-h6);
+            font-family: var(--font-main);
+            margin-top: 1.5rem;
+            color: var(--color-primary);
+            line-height: 2rem;
+        }
+
+    .right-form{
+        flex-basis: 60%;
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-self: stretch;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-flex{ 
+        width: 100%; 
+        display: flex;
+        justify-content: flex-end;
+    }
+
+/* FORMULARIO ======================================= */
+form{
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 3rem;
+}  
+
+.group{
+    width: 100%;
+    position:relative; 
+    margin-bottom: 3.5rem;
+  }
+  .group:last-child{ margin-bottom: 0;}
+  
+.input-text{
+    font-family: var(--font-main);
+    color: var(--color-primary);
+    font-size: var(--parrafo);
+    padding: 10px 10px 7px 15px;
+    display:block;
+    width: 100%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #bbbbbe;
+  }
+  .input-text:focus { outline:none; }
+  
+  /* LABEL ======================================= */
+  
+  .nombre-label {
+    color: var(--color-primary);
+    font-family: var(--font-main);
+    font-size: var(--parrafo);
+    position: absolute;
+    pointer-events:none;
+    left:.3rem;
+    top: .8rem;
+    transition: all .3s ease; 
+    -moz-transition: all .3s ease; 
+    -webkit-transition: all .3s ease;
+  }
+
+  
+  /* active state */
+  
+ .input-text:focus ~ .nombre-label, .input-text:valid ~ .nombre-label {
+    top:-20px;
+    font-size: .9rem;
+    color: var(--color-secundary);
+  }
+  
+  /* BOTTOM BARS ================================= */
+  
+  .bar 	{ position:relative; display:block; width: 100%; }
+  .bar:before, .bar:after {
+    content:'';
+    height: 1px; 
+    width: 0;
+    bottom: 1px; 
+    position:absolute;
+    background: var(--color-secundary); 
+    transition: all .3s ease; 
+    -moz-transition: all .3s ease; 
+    -webkit-transition: all .3s ease;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  
+.input-text:focus ~ .bar:before, .input-text:focus ~ .bar:after{
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width: 100%; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  
+  .input-text:focus ~ .highlight {
+    -webkit-animation: input-textHighlighter 0.3s ease;
+    -moz-animation:input-textHighlighter 0.3s ease;
+    animation:input-textHighlighter 0.3s ease;
+  }
+  
+textarea{
+    width: 100%;
+    min-height: 30vh;
+    position: relative;
+    display: block;
+    border: none;
+    background: none;
+    resize: none;
+    padding: 15px;
+    font-family: var(--font-main);
+    font-size: var(--parrafo);
+    caret-color: var(--color-primary);
+    border-bottom   : 1px solid var(--color-focus);
+    color: var(--color-focus);
+    letter-spacing: .1px;
+    line-height: 1.5;
+}
+
+textarea:focus { outline:none; } 
+
+textarea::placeholder{
+    color: var(--color-focus);
+    font-size: var(--parrafo);
+}
+
+.btn-subtmit{
+    border: 0;
+    background: var(--color-primary);
+    padding: 1rem 3.5rem;
+    color: #9b9898;
+    margin: 1rem 0;
+    font-family: var(--font-main);
+    font-size: 1.25rem;
+    transition: all .3s ease;
+}
+
+.btn-subtmit:hover{
+    background: #2a2a2a;
+    -webkit-animation: btn-subtmit .2s ease;
+    -moz-animation: btn-subtmit .2s ease;
+    animation:btn-subtmit .2s ease;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 834px) {
+    .left-titulo h4{
+        font-size: var(--heading-h3);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    textarea{
+        min-height: 20vh;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .left-titulo,
+    .right-form{ flex-basis: 100%;}
+    .form-flex{ justify-content: baseline;}
+    form{ width: 100%;}
+}
+
+@media screen and (max-width: 414px) {
+    
+}
+
+/*
+.group{
+    width: 100%;
+    position:relative; 
+    margin-bottom: 3.5rem;
+  }
+  
+.input-text{
+    color: #fff;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 95%;
+    border: none;
+    background: none;
+    border-bottom:1px solid #34343b;
+  }
+  .input-text:focus { outline:none; }
+  
+  /* LABEL ======================================= */
+  /*
+  .nombre-label {
+    color:#A7A1A1; 
+    font-size: 1.2em;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:.3rem;
+    top: .8rem;
+    transition: all .3s ease; 
+    -moz-transition: all .3s ease; 
+    -webkit-transition: all .3s ease;
+  }
+  
+  
+  /* active state */
+  /*
+ .input-text:focus ~ .nombre-label, .input-text:valid ~ .nombre-label {
+    top:-20px;
+    font-size: .9rem;
+    color:#ffff;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  /*
+  .bar 	{ position:relative; display:block; width: 100%; }
+  .bar:before, .bar:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#bbbbbe; 
+    transition: all .3s ease; 
+    -moz-transition: all .3s ease; 
+    -webkit-transition: all .3s ease;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  /*
+.input-text:focus ~ .bar:before, .input-text:focus ~ .bar:after{
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  /*
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width: 100%; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  /*
+  .input-text:focus ~ .highlight {
+    -webkit-animation: input-textHighlighter 0.3s ease;
+    -moz-animation:input-textHighlighter 0.3s ease;
+    animation:input-textHighlighter 0.3s ease;
+  }
+  
+/*
+textarea{
+    width: 100%;
+    min-height: 30vh;
+    position: relative;
+    display: block;
+    border: none;
+    background: none;
+    resize: none;
+    padding: 15px;
+    font-family: var(--font-main);
+    font-size: var(--parrafo);
+    caret-color: #616166;
+    border-bottom   : 1px solid #bfbfbf;
+    color: #fff;
+    letter-spacing: .2px;
+    line-height: 1.5;
+}
+
+textarea:focus { outline:none; } 
+
+textarea::placeholder{
+    color: #A7A1A1;
+    font-size: 1.2em;
+}
+
+.btn-subtmit{
+    border: 0;
+    background: #4E4242;
+    padding: 1rem 3.5rem;
+    color: #bbbbbe;
+    margin: 1rem 0;
+    font-family: var(--font-main);
+    font-size: 1.2em;
+    transition: all .3s ease;
+}
+
+.btn-subtmit:hover{
+    background: #34343b;
+    -webkit-animation: btn-subtmit .2s ease;
+    -moz-animation: btn-subtmit .2s ease;
+    animation:btn-subtmit .2s ease;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .contacto{
+        height: 80%;
+    }
+
+    .contacto-titulo{ flex: 1;}
+    .formulario{ 
+        flex: 1;
+        padding: 9rem 0 0 0;
+    }
+    
+    .flex-formulario{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0 4rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    textarea{
+        min-height: 20vh;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .flex-formulario {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .flex-formulario {
+        padding: 0;
+    }
+    .contacto {
+        margin-top: 1.5rem;
+    }
+}
+*/

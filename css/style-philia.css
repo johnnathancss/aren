@@ -1,0 +1,1026 @@
+@font-face {
+    font-family: 'StudioFeixenSansTrial';
+    src: url('../fonts/strial/StudioFeixenSansTrial-Bold.ttf') format("truetype"),
+         url('../fonts/strial/StudioFeixenSansTrial-Book.ttf') format("truetype"),
+         url('../fonts/strial/StudioFeixenSansTrial-Medium.ttf') format("truetype"),
+         url('../fonts/strial/StudioFeixenSansTrial-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+ }
+ 
+ @font-face {
+     font-family: 'author';
+     src: url('../fonts/Author-Regular.ttf') format("truetype"),
+          url('../fonts/Author-Semibold.ttf') format("truetype"),
+          url('../fonts/Author-Bold.ttf') format("truetype"),
+          url('../fonts/Author-Medium.ttf') format("truetype"),
+          url('../fonts/Author-Light.ttf') format("truetype");
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+	src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+		 ;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+	src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+		 ;
+    font-weight: bolder;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Domaine Disp Nar';
+	src: url('../fonts/domaine/DomaineDispNar-Regular.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarMedium.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarSemibold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNar-Bold.ttf') format("truetype"),
+		 url('../fonts/domaine/DomaineDispNarExtrabold.ttf') format("truetype")
+		 ;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ----- ROOT ----- */
+:root{ 
+    --display: 5.96rem;
+    --heading-h1: 3.815em;
+    --heading-h2: 4.768rem;
+    --heading-h3: 3.052rem;
+    --heading-h4: 2.441em;
+	--heading-h5: 1.953em;
+	--heading-h6: 1.563em;
+    --parrafo: 1.25em;
+    --font-main: 'StudioFeixenSansTrial-Book-Regular', 'Author-Regular';
+    --font-serif: 'Domaine Disp Nar', 'serif';
+    --color-primary: #191919;
+    --color-secundary: #F43F17;
+    --color-hover: #191919;
+    --color-focus: #77777c;
+}
+
+p{ 
+    font-size: var(--heading-h6);
+    font-weight: normal; 
+    line-height: 2rem; 
+}
+
+h3{ 
+    font-size: var(--heading-h6);
+    font-weight: 700;
+}
+
+/* ----- CÓDIGOS IMAGEN ----- */
+
+.item {
+    width: 100%;
+    height: auto;
+    position: relative;
+    will-change: transform;
+    display: flex;
+    justify-content: center;
+}
+
+.item__img-wrap {
+	width: 100%;
+	height: 75vh;
+	--aspect-ratio: 1/1.5;
+	overflow: hidden;
+	padding-bottom: calc(100% / (var(--aspect-ratio)));
+    max-width: calc(100%);
+	will-change: transform;
+}
+
+.item__img {
+	height: calc(100% + (2 * var(--overflow)));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+	background-size: cover;
+	background-position: 50% 0%;
+	will-change: transform;
+}
+
+.item__img--t1 {
+	--overflow: 120px;
+}
+
+.item:first-child .item__img-wrap{
+	width: calc(100%);
+	--aspect-ratio: 1500/844;
+	--image: url(../image/parallax__philia_producto.png);
+}
+
+.wireframe .item .item__img-wrap{
+	width: calc(100%);
+	--aspect-ratio: 1700/924;
+	--image: url(../image/parallax__wireframe.png);
+}
+
+.moodboard .item .item__img-wrap {
+	width: calc(100%);
+	--aspect-ratio: 1700/924;
+	--image: url(../image/moodboard.png);
+}
+
+.diseño-visual .item .item__img-wrap {
+	width: calc(100%);
+	--aspect-ratio: 1700/924;
+	--image: url(../image/.png);
+}
+
+.componentes .item .item__img-wrap {
+    width: calc(100vw);
+	--aspect-ratio: 1700/924;
+	--image: url(../image/componentes.png);
+}
+
+.diseno-visual .item .item__img-wrap {
+    width: calc(100vw);
+	--aspect-ratio: 1700/924;
+	--image: url(../image/parallax__diseño1.png);
+}
+
+.visual .item .item__img-wrap {
+    width: calc(100vw);
+	--aspect-ratio: 1700/924;
+	--image: url(../image/parallax__diseño_proto.png);
+}
+
+.siguiente .item .item__img-wrap {
+    width: calc(100vw);
+    --aspect-ratio: 920/205;
+	--image: url(../image/hiit/siguiente__parallax__fit.png);
+}
+
+
+/* ----- HEADER ----- */
+
+body{ 
+    transition: all .3s ease-in;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+/* ----- HEADER ----- */
+
+header{
+    max-width: 100vw;
+    position: relative;
+	padding: 2rem 0;
+}
+
+.menu-bar{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.logo{
+    display: flex;
+    flex: 2 1 auto;
+    left: 0;
+}
+    .logo p{
+        color: var(--color-secundary);
+        font-weight: 700;
+        letter-spacing: 3px;
+        font-size: var(--parrafo);
+        font-family: var(--font-main);
+    }
+
+    .logo p:hover,
+    .logo p:focus {
+        color: #f88268;
+        outline: none;
+    }
+
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    flex: 5 1 auto;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+nav .menu-btn i{
+    color: 77777c;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    color: #19191b;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.nav-item{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nav-item li a{
+    text-decoration: none;
+    font-size: var(--parrafo);
+    font-family: var(--font-serif);
+    font-weight: 300;
+    color: #7A7A7A;
+    outline: none;
+}
+
+.nav-item li a:hover,
+.nav-item li a:focus {
+    color: var(--color-hover);
+    outline: none;
+}
+
+.nav-item li{ margin-right: 3rem;}
+.nav-item li:last-child{
+    margin-right: 0;
+}
+.nav-item li a.active{
+    color: #191919;
+}
+    .atras a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: var(--parrafo);
+        font-family: var(--font-serif);
+        color: var(--color-primary);
+        margin: 4rem 0 4rem 3rem;
+    }
+    .atras img{ margin-right: .55rem;}
+
+    .atras a:hover,
+    .atras a:focus {
+        color: var(--color-focus);
+        outline: none;
+        transition: all .3s ease-in-out;
+    }
+
+
+
+/* --- CÓDIGO DE CONTENIDO --- */
+.contenido{
+	max-width: 100vw;
+	height: auto;
+	position: relative;
+}
+	.flex{
+		width: 100%;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+	}
+
+    .descripcion{
+		width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .nada{
+        display: flex;
+        flex-basis: 30%;
+    }
+
+    .research{
+        display: flex;
+        flex-basis: 70%;
+        flex-flow: row wrap;
+        align-items: stretch;
+        align-self: stretch;
+        padding: 3rem 3rem 3rem 0;
+    } 
+    .research .texto-intro{ padding: 4rem 0;}
+    .texto-research{ padding: 2rem 0;}
+    .texto-research h4{ 
+        font-size: var(--heading-h6);
+        font-weight: 700;
+        padding-bottom: 1rem;
+    }
+
+.thinking{
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: stretch;
+    align-items: center;
+}
+    .thinking li{
+        display: flex;
+        align-items: flex-end;
+        align-self: stretch;
+        font-size: var(--heading-h6);
+        margin-right: 1.5rem;
+    }
+    .uno, .dos, .tres,
+    .cuatro, .cinco{ 
+        font-size: 0.8em;
+        color: var(--color-secundary);
+        margin-right: .55rem;
+    }
+
+
+.analizar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}   
+    .desktop{
+        flex-basis: 70%;
+    }
+        .desktop h3{ 
+            font-size: var(--heading-h2);
+            letter-spacing: 1px;
+            padding: 3rem 0;
+        }
+    
+    .benchmark .logos-competencia{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 4rem 0;
+    }
+
+    .benchmark h4, .resultado h4,
+    .usuario h4{
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 3rem 0 1rem 0;
+    }
+    .insight h4{
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 3rem 0 1rem 0;
+    }
+    
+        .lista-benchmark{ margin: 3rem 0 3rem 1.2rem;}
+        .insight-listados{ margin: 0 0 3rem 1.2rem;}
+        .lista-benchmark li,
+        .insight-listados li{
+            font-size: var(--parrafo);
+            line-height: 35px;
+            color: var(--color-primary);
+            list-style: disc;
+        }
+        
+    .logos-competencia .rpp{
+        object-fit: contain; 
+        max-width: 35%; 
+        display: block;
+    }
+
+    .logos-competencia .teleo{
+        object-fit: contain; 
+        max-width: 45%; 
+        display: block;
+    }
+
+    .usuario .comentarios{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 4rem 0;
+    }  
+        .comentarios img{
+            object-fit: contain; 
+            max-width: 40%; 
+            display: block;
+        }
+        .comentarios img:nth-child(1){ margin-right: 2rem;}
+        .comentarios img:nth-child(3){ margin-top:2rem;}
+
+
+.user-persona h4{
+    font-size: var(--heading-h5);
+    font-weight: 700;
+    padding: 5rem 0 1rem 0;
+}
+
+.persona-1{ padding: 2rem 0 7rem 0;}
+.user-persona .persona-1 img{
+    object-fit: contain; 
+    max-width: 85%;
+    display: block;
+}
+
+.mapa,
+.user-flow{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+} 
+
+.mapa h4,
+.user-flow h4 { 
+    font-size: var(--heading-h5);
+    font-weight: 700;
+    padding: 3rem 0 5rem 5rem;
+}
+
+.sitio-image,
+.flow-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .sitio-image img,
+    .flow-image img{
+        object-fit: contain; 
+        max-width: 80%;
+        display: block;
+    }
+
+
+.diseno{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+    .ideacion{ 
+        flex-basis: 70%;
+        margin: 4rem 0;
+        padding: 3rem;
+    }
+    .ideacion h3{
+        font-size: var(--heading-h2);
+        letter-spacing: 1px;
+        padding: 3rem 3rem 3rem 0;
+    }
+    .ideacion h4 { 
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding-bottom: 2rem ;
+    }
+
+.wireframe,
+.moodboard,
+.tipografia{
+    width: 100%;
+    position: relative;
+}
+    .wireframe h4 { 
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 3rem 0 5rem 5rem;
+    }
+
+.moodboard h4 { 
+    font-size: var(--heading-h5);
+    font-weight: 700;
+    padding: 5rem 0 5rem 5rem;
+}
+
+.tipografia h4{ 
+    font-size: var(--heading-h5);
+    font-weight: 700;
+    padding: 5rem 0 5rem 5rem;
+}
+.tipografia .tipo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+    .tipo-image img{
+        object-fit: contain; 
+        max-width: 50%; 
+        display: block;
+    }
+
+.color{ 
+    width: 100%; 
+    position: relative;
+}
+
+    .color .flex-colores{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .color h4{ 
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 5rem 0 5rem 5rem;
+    }
+
+    .color-neutral,
+    .color-primario,
+    .otro{
+        flex-basis: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .color-neutral img,
+    .color-primario img,
+    .otro img{
+        object-fit: contain; 
+        max-width: 80%;
+        display: block;
+    }
+
+
+.icono{ 
+    width: 100%; 
+    position: relative;
+}
+    .icono h4{ 
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 3rem 0 3rem 5rem;
+    }
+    .imagen-color{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    .imagen-color img{
+        object-fit: contain; 
+        max-width: 85%;
+        display: block;
+    }
+
+.componentes{ 
+    width: 100%; 
+    position: relative;
+    margin-bottom: 3rem;
+}   
+    .componentes h4{ 
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 3rem 0 3rem 5rem;
+    }
+
+
+.diseno-visual{ 
+    width: 100%; 
+    position: relative;
+    margin-bottom: 3rem;
+} 
+    .diseno-visual h4{ 
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding: 3rem 0 3rem 5rem;
+    }
+
+.pantallas{ 
+    width: 100%; 
+    position: relative;
+}
+    .wrap{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        margin: 3rem 0;
+    }
+    .wrap-left,
+    .wrap-right{ 
+        flex-basis: 45%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrap-left .esquema{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 3rem;
+    }
+        .esquema .imagen-s{
+            display: flex;
+            justify-content: center;
+        }
+            .esquema .imagen-s img{
+                object-fit: contain; 
+                max-width: 80%; 
+                display: block;
+            }
+
+    .wrap-right .busqueda{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 3rem;
+    }
+        .busqueda .imagen-b{
+            display: flex;
+            justify-content: center;
+        }
+            .busqueda .imagen-b img{
+                object-fit: contain; 
+                max-width: 80%; 
+                display: block;
+            }
+
+    .esquema p{
+        font-size: var(--parrafo);
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .busqueda p{
+        font-size: var(--parrafo);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+.visual{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.final{ 
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+    .conclusion{ 
+        flex-basis: 70%;
+        margin: 5rem 0 10rem 0;
+        padding-right: 3rem;
+    }
+    .conclusion h4{
+        font-size: var(--heading-h5);
+        font-weight: 700;
+        padding-bottom: 2rem;
+    }
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    padding: 5rem 0;
+    background-color: var(--color-primary);
+}
+    .footer a{
+        font-size: var(--heading-h5);
+        text-decoration: none;
+        outline: none;
+        color: rgba(255, 255, 255, 0.808);
+        display: flex;
+        align-items: center;
+    }
+
+    .footer a:hover,
+    .footer a:focus {
+        color: #fff;
+        outline: none;
+        transition: all .3 ease-in;
+    }
+
+    .arrow{
+        margin: .6rem 0 0 1rem;
+        font-size: var(--heading-h6);
+        font-weight: 100;
+    }
+
+
+@media (max-width: 768px){
+
+.logo{ flex: 1;}
+.nav-bar{ flex: 1;}
+
+    .nav-item li{ 
+        line-height: 2.4rem;
+        letter-spacing: .1rem;  
+    }
+
+    .nav-item li a{
+        padding: 0;       
+        margin-left: 5rem;
+    }
+        
+    .nav-toggle{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-nav_visible{ left: 0;}
+
+.nav-item{
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #f6f6f6;
+    height: 85vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+    padding: 3rem 0;
+    overflow-y: auto;
+    transition: left .3s;
+}
+
+#click:checked ~ .nav-item{ left: 0;}
+.nav-item li{
+    width: 100%;
+    margin: 40px 0;
+}
+
+.nav-item li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    background: none;
+}
+
+#click:checked ~ .nav-item li a{ margin-left: 0px;}
+
+nav .menu-btn i{ display: block;}
+
+#click:checked ~ .menu-btn i:before{ content: "\f00d";}
+
+.ideacion{ flex-basis: 100%;}
+.metodos{ 
+    flex-basis: 100%;
+    margin-right: 0;
+    padding: 3rem 5rem;
+}
+
+.conclusion {
+    flex-basis: 100%;
+    margin: 0 0 6rem 0;
+    padding: 3rem 5rem;
+}
+
+.nada, .research,
+.desktop{ flex-basis: 100%;}
+.research, .desktop{ padding: 1rem 5rem;}
+.ideacion { padding: 1.5rem 5rem;}
+.user-persona .persona-1,
+.user-persona .persona-2{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.user-flow { margin-bottom: 0;}
+.desktop h3, .ideacion h3,
+.metodos h3{ font-size: var(--heading-h3);}
+.desktop h4, .mapa h4,
+.user-flow h4, .ideacion h4,
+.wireframe h4, .moodboard h4,
+.tipografia h4, .color h4,
+.componentes h4, .diseno-visual h4,
+.metodos h4 { font-size: var(--heading-h6);}
+.thinking li{ margin: 0 1.5rem 1.2rem 0;}
+.benchmark,
+.metodos{ padding-right: 3rem;}
+.color-neutral,
+.color-primario{
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+}
+.color h4{ padding: 3rem 0 3rem 5rem;}
+.color-neutral img, .color-primario img {
+    aspect-ratio: 0;
+}
+
+.metrica img{ max-width: 100%;}
+.funciona, .no-funciona, .mejorado{ flex-basis: 100%;}
+
+/* ---- DIARIO IMG --- */
+.diario .item .item__img-wrap{
+	width: calc(70%);
+	--aspect-ratio: 10/17;
+}
+.diario .item__img {
+	height: calc(50% + (2 * var(--overflow)));
+}
+.diario .item__img--t1{ --overflow: 80px;}
+
+/* ---- AJUSTES IMG --- */
+.ajustes .item .item__img-wrap{
+	width: calc(90%);
+	--aspect-ratio: 16/33;
+}
+.ajustes .item__img {
+	height: calc( 50% + (2* var(--overflow)));
+}
+.ajustes .item__img--t1{ --overflow: 80px;}
+
+/* ---- CONFIGURACION IMG --- */
+.configuracion .item .item__img-wrap{
+	width: calc(90%);
+	--aspect-ratio: 16/33;
+}
+.configuracion .item__img {
+	height: calc( 50% + (2* var(--overflow)));
+}
+.configuracion .item__img--t1{ --overflow: 80px;}
+
+/* ---- CONFIGURACION IMG --- */
+.home .item .item__img-wrap{
+	width: calc(90%);
+	--aspect-ratio: 16/33;
+}
+.home .item__img {
+	height: calc( 50% + (2* var(--overflow)));
+}
+.home .item__img--t1{ --overflow: 80px;}
+.siguiente a{ left: 4rem;}
+}
+
+@media screen and ( max-width: 576px){
+.atras a{ margin: 4rem 0 1rem 3rem;}
+.research, .desktop{ padding: 3rem;}
+.detalles{ flex-flow: row wrap;}
+.ideacion{ padding: 3rem; margin: 0;}
+.detalles .left, .detalles .right{ flex-basis: 100%;}
+.logos-competencia .size-plus,
+.logos-competencia .size-tmo,
+.logos-competencia .size-in,
+.logos-competencia .size-mangex{
+    max-width: 45%;
+    object-fit: 0;
+}
+.logos-competencia .size-plus,
+.logos-competencia .size-in {
+    margin-bottom: 1.5rem;
+}
+
+.benchmark .logos-competencia {
+    justify-content: space-around;
+}
+
+.componentes h4, .icono h4, .color h4, .tipografia h4,
+.moodboard h4, .wireframe h4, .diseno-visual h4,
+.user-flow h4, .mapa h4{ padding: 3rem 0 3rem 3rem}
+
+.debilidad, .fortaleza{ flex-basis: 100%;}
+.debilidad{ margin-bottom: 5rem;}
+.wrap-left, .wrap-right { flex-basis: 100%;}
+
+.wrap-left .esquema{ padding: 0rem 3rem;}
+.wrap-right .busqueda{ padding: 2rem;}
+.visual{ margin: 2rem 0;}
+
+.item:first-child .item__img {
+	height: calc(50% + (2 * var(--overflow)));
+}
+
+.wireframe .item__img {
+	height: calc(50% + (2 * var(--overflow)));
+}
+
+.moodboard .item__img {
+	height: calc(25% + (2 * var(--overflow)));
+}
+
+.componentes .item__img {
+	height: calc(25% + (2 * var(--overflow)));
+}
+
+.diseno-visual .item__img {
+	height: calc(25% + (2 * var(--overflow)));
+}
+
+.componente-visual .item__img {
+	height: calc(25% + (2 * var(--overflow)));
+}
+
+
+.texto-research:nth-child(5){ padding-bottom: 0;}
+
+/* ---- DIARIO IMG --- */
+.diario .item .item__img-wrap{
+	width: calc(80%);
+	--aspect-ratio: 10/17;
+}
+.diario .item__img {
+	height: calc(70% + (2 * var(--overflow)));
+}
+
+/* ---- AJUSTES IMG --- */
+.ajustes .item .item__img-wrap{
+	width: calc(80%);
+	--aspect-ratio: 10/17;
+}
+.ajustes .item__img {
+	height: calc(70% + (2 * var(--overflow)));
+}
+
+/* ---- CONFIGURACION IMG --- */
+.configuracion .item .item__img-wrap{
+	width: calc(80%);
+	--aspect-ratio: 10/17;
+}
+.configuracion .item__img {
+	height: calc(70% + (2 * var(--overflow)));
+}
+
+/* ---- HOME IMG --- */
+.home .item .item__img-wrap{
+	width: calc(80%);
+	--aspect-ratio: 10/17;
+}
+.home .item__img {
+	height: calc(70% + (2 * var(--overflow)));
+}
+
+.logos-competencia .rpp{ max-width: 45%;}
+.logos-competencia .teleo{ max-width: 75%;}
+
+.tipo-image img { aspect-ratio: 0; max-width: 70%;}
+
+.persona-1{ padding: 2rem 0 0 0;}
+.user-persona .persona-1 img{ max-width: 100%;}
+
+.comentarios img { max-width: 85%;}
+.comentarios img:nth-child(1) {
+    margin-right: 0;
+}
+.comentarios img:nth-child(2) {
+    margin-top: 2rem;
+}
+
+.conclusion{ 
+    margin: 0 0 4rem 0;
+    padding: 3rem;
+}
+
+.siguiente a{
+    max-width: 30%;
+    top: 50px;
+    transform: translateY(80%);
+    left: 3rem;
+}
+
+.siguiente .item .item__img-wrap {
+	--image: url(../image/mobile-philia.png);
+}
+
+.siguiente .item__img {
+	height: calc(50% + (1 * var(--overflow)));
+}
+
+}
+
+@media screen and ( max-width: 414px){
+    
+    .componente-visual .item__img {
+        height: calc(25% + (2 * var(--overflow)));
+    }
+    .research, .desktop {
+        padding: 2rem 3rem 2rem 3rem;
+    }
+    .siguiente a{
+        max-width: 30%;
+        top: 50px;
+        transform: translateY(80%);
+        left: 2rem;
+    }
+}

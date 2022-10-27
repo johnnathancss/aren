@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyectos de Yupanui</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/domaine.css">
+    <link rel="stylesheet" href="css/proyectos.css">
+    <link rel="stylesheet" href="css/css-awsome/all.min.css">
+
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+   </script>
+</head>
+<body class="loading">
+   
+   <div onmouseenter="mouseenter()" onmouseleave="mouseleave()" class="caja">
+   </div>
+
+    <main>
+        <header>
+                <div class="menu-bar">
+                    <div class="logo">
+                        <p href="index.html">YUPANQUI</p>
+                    </div>
+                    
+                    <nav class="nav-bar">
+                        <input type="checkbox" id="click">
+                        <label for="click" class="menu-btn">
+                            <i class="fas fa-bars"></i>
+                        </label>
+
+                        <ul class="nav-item">
+                            <li class="btn"><a href="index.html">Inicio</a></li>
+                            <li class="btn"><a class="active" href="">Proyectos</a></li>
+                            <li class="btn"><a href="acerca.html">Acerca de Mi</a></li>
+                            <li class="btn"><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
+            
+        <div class="options">
+            <div class="wrapper">
+               <div class="option promart" style="--optionBackground:url(..);">
+                  <div class="label">
+                     <a href="promart.html">
+                        <img src="image/pro_mart/Promart-hover.png" alt="">
+                        <div class="main">
+                           <p>Promart</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="option beluks" style="--optionBackground:url(..);">
+                  <div class="label">
+                     <a href="beluks.html">
+                        <img src="image/bel/beluks-hover.png" alt="">
+                        <div class="main">
+                           <p>Beluks</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="option philia" style="--optionBackground:url(..);">
+                  <div class="label">
+                     <a href="philia.html">
+                        <img src="image/philia_hover.jpg" alt="">
+                        <div class="main">
+                           <p>Philia</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+
+            </div>
+        </div>
+    </main>
+   <script src="js/script.js"></script>
+   <script src="js/imagesloaded.pkgd.min.js"></script>
+   <script src="js/demo.js"></script>
+   <script src="js/kursor.min.js"></script>
+   <script>
+       var kursorx = new kursor({
+       type: 1,
+       color: '#F43F17',
+       })
+   
+   
+       function mouseenter () {
+       kursorx.hidden()
+       }
+       function mouseleave () {
+       kursorx.hidden(false)
+       }
+       // function clickx() {
+       //   // kursorx.color('rgba(100,0,100)')
+       //   kursorx.hidden()
+       // }
+       // function clickx2() {
+       //   // kursorx.color('rgba(100,0,100)')
+       //   kursorx.hidden(false)
+       // }
+   
+       var kursor2 = new kursor({
+       el: '.caja',
+       color: '#F43F17',
+       type: 4,
+       })
+   
+       // var kursor2 = new kursor({
+       //   type: 2,
+       //   removeDefaultCursor: false,
+       // })
+   </script>
+</body>
+</html>
